@@ -51,14 +51,16 @@ enum class HIDUsageGenericDesktopSubType
 enum class HIDUsageSimulationSubType
 {
     Brake       = 0xC5,
-    Accelerator = 0xC4
+    Accelerator = 0xC4,
 };
 
 
 enum class HIDUsageDigitizerSubType
 {
-    TipSwitch = 0x42,
-    ContactId = 0x51
+    TipSwitch	= 0x42,
+    ContactId	= 0x51,
+    ContactCount = 0x54,
+    ScanTime	= 0x56,
 };
 
 

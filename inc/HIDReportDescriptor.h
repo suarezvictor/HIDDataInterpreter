@@ -26,6 +26,8 @@ enum class HIDIOType
     Key,
     TipSwitch,
     ContactId,
+    ContactCount,
+    ScanTime,
 };
 class HIDUsage;
 

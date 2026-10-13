@@ -75,6 +75,10 @@ HIDInputOutput::HIDInputOutput(const HIDUsage &usage, uint32_t idx) : type(HIDIO
     	    this->type = HIDIOType::TipSwitch;
 	    else if (usage.sub_type == (uint32_t)HIDUsageDigitizerSubType::ContactId)
     	    this->type = HIDIOType::ContactId;
+	    else if (usage.sub_type == (uint32_t)HIDUsageDigitizerSubType::ContactCount)
+    	    this->type = HIDIOType::ContactCount;
+	    else if (usage.sub_type == (uint32_t)HIDUsageDigitizerSubType::ScanTime)
+    	    this->type = HIDIOType::ScanTime;
    	}
     else if (usage.type == HIDUsageType::Button)
         this->type = HIDIOType::Button;
