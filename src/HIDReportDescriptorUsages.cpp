@@ -19,6 +19,8 @@
 #define USAGE_PAGE_Ordinal        0x0A
 #define USAGE_PAGE_Telephony      0x0B
 #define USAGE_PAGE_Consumer       0x0C
+#define USAGE_PAGE_Consumer       0x0C
+#define USAGE_PAGE_Digitizer      0x0D
 #define USAGE_PAGE_VendorDefined  0xFF00
 
 //---------------COLLECTION-----------------
@@ -96,6 +98,8 @@ HIDUsageType convert_usage_page(uint32_t usage_page)
             return HIDUsageType::Consumer;
         case USAGE_PAGE_Keyboard:
             return HIDUsageType::Keyboard;
+        case USAGE_PAGE_Digitizer:
+            return HIDUsageType::Digitizer;
         default:
             return HIDUsageType::Unknown;
     }

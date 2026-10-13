@@ -23,7 +23,9 @@ enum class HIDIOType
     Accelerator,
     HatSwitch,
     Wheel,
-    Key
+    Key,
+    TipSwitch,
+    ContactId,
 };
 class HIDUsage;
 

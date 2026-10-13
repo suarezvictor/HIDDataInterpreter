@@ -69,7 +69,13 @@ HIDInputOutput::HIDInputOutput(const HIDUsage &usage, uint32_t idx) : type(HIDIO
         else if (usage.sub_type == (uint32_t)HIDUsageSimulationSubType::Accelerator)
             this->type = HIDIOType::Accelerator;
     }
-    
+    else if (usage.type == HIDUsageType::Digitizer)
+    {
+	    if (usage.sub_type == (uint32_t)HIDUsageDigitizerSubType::TipSwitch)
+    	    this->type = HIDIOType::TipSwitch;
+	    else if (usage.sub_type == (uint32_t)HIDUsageDigitizerSubType::ContactId)
+    	    this->type = HIDIOType::ContactId;
+   	}
     else if (usage.type == HIDUsageType::Button)
         this->type = HIDIOType::Button;
     else if (usage.type == HIDUsageType::ReportId)

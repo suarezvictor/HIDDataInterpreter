@@ -19,7 +19,8 @@ enum class HIDUsageType
     Simulation,
     VendorDefined,
     Consumer,
-    Keyboard
+    Keyboard,
+    Digitizer,
 };
 
 //https://usb.org/sites/default/files/hut1_2.pdf p30
@@ -52,6 +53,14 @@ enum class HIDUsageSimulationSubType
     Brake       = 0xC5,
     Accelerator = 0xC4
 };
+
+
+enum class HIDUsageDigitizerSubType
+{
+    TipSwitch = 0x42,
+    ContactId = 0x51
+};
+
 
 class HIDProperty
 {
